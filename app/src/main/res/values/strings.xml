@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">My Application 131 Tanometr</string>
+    <string name="save">Сохранить</string>
+    <string name="surname">Фамилия</string>
+    <string name="name">Имя</string>
+    <string name="midlename">Отчество</string>
+    <string name="volumeBut">Давление</string>
+    <string name="pulseBut">Пульс</string>
+    <string name="autor">Комплексная система мониторинга здоровья : Тимура Альбертовича</string>
+    <string name="volumeHight">Высокое давление</string>
+    <string name="volumeLow">Низкое давление</string>
+    <string name="pulse">Пульс</string>
+
+</resources>

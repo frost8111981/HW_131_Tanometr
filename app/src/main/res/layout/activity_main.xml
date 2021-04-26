@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F72F3842"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/lastname"
+        android:layout_width="248dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="@string/midlename"
+        android:inputType="textPersonName"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#43EDE7E7"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/name"
+        app:layout_constraintStart_toStartOf="@+id/name"
+        app:layout_constraintTop_toBottomOf="@+id/name" />
+
+    <EditText
+        android:id="@+id/surname"
+        android:layout_width="248dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="@string/surname"
+        android:inputType="textPersonName"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#43EDE7E7"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="360dp"
+        android:layout_height="189dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cardiologia_01" />
+
+    <Button
+        android:id="@+id/buttonSave1"
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+
+        android:layout_marginStart="50dp"
+        android:backgroundTint="#7CD688"
+        android:text="@string/save"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/buttonRead" />
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="248dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="@string/name"
+        android:inputType="textPersonName"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#43EDE7E7"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/surname"
+        app:layout_constraintStart_toStartOf="@+id/surname"
+        app:layout_constraintTop_toBottomOf="@+id/surname" />
+
+    <Button
+        android:id="@+id/buttonVolume"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#DC6860"
+        android:text="@string/volumeBut"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSave1" />
+
+    <Button
+        android:id="@+id/buttonPulse"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="60dp"
+        android:backgroundTint="#FF9800"
+        android:text="@string/pulseBut"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonRead" />
+
+    <TextView
+        android:id="@+id/autor"
+        android:layout_width="321dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="32dp"
+        android:hint="@string/autor"
+        android:textColor="#81868A"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/buttonPulse"
+        app:layout_constraintStart_toStartOf="@+id/buttonVolume"
+        app:layout_constraintTop_toBottomOf="@+id/buttonVolume" />
+
+    <Button
+        android:id="@+id/buttonRead"
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="50dp"
+        android:text="Считать"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lastname"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
