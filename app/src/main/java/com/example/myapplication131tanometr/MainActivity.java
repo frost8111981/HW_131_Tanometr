@@ -72,6 +72,11 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    //if (volHigSavValue.equals("")) {
+//        Toast.makeText(MainActivity2.this, " Заполните данные - Высокое давление", Toast.LENGTH_LONG).show();
+//        System.out.println(" Заполните данные - Высокое давление");
+//        }
+
     private void volumeButton(){ //     1. Метод действия кнопки
         Button volumeBut = findViewById(R.id.buttonVolume); //     2. Создаем ссылку на созданную кнопку
         volumeBut.setOnClickListener(new View.OnClickListener() { //      3. Создали слушителя нажатия на кнопку

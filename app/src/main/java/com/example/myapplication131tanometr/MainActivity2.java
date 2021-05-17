@@ -31,13 +31,11 @@ public class MainActivity2 extends AppCompatActivity {
                 String volLowSavValue = volLowSav.getText().toString(); //     8.
                 Log.d(TAG, "НАЖАТА КНОПКА СОХРАНИТЬ");
                 try {                  //     9. Обрабатываем ошибки
-                    Volume value = new Volume(Integer.parseInt(volHigSavValue), Integer.parseInt(volLowSavValue));
+                    Volume volume = new Volume(Integer.parseInt(volHigSavValue), Integer.parseInt(volLowSavValue));
 
                 } catch (Exception ex) {
                     Toast.makeText(MainActivity2.this, "Не верный формат ввода", Toast.LENGTH_LONG).show();  //     Всплывающие ошибки
                 }
-
-
             }
 
         });
