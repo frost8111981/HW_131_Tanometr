@@ -19,27 +19,28 @@ import java.io.InputStreamReader;
 public class MainActivity extends AppCompatActivity {
     FileOutputStream outputStream;  // предназначен для записи байтов в файл
     InputStreamReader inputStreamReader;  // записывает текст в поток
-    final String TAG ="MyLog";
+    final String TAG ="MyLog";  // логирование
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Log.d(TAG,"ЗАГРУЖЕН ОСНОВНОЙ ЭКРАН");
+        Log.d(TAG,"ЗАГРУЖЕН ОСНОВНОЙ ЭКРАН");  // логирование
         volumeButton();
         pulseButton();
-        TextView text = findViewById(R.id.autor);
-        EditText editSurname = findViewById(R.id.surname);
-        EditText editName = findViewById(R.id.name);
-        EditText editLastname = findViewById(R.id.lastname);
-        Button save = findViewById(R.id.buttonSave1);
-        Button read = findViewById(R.id.buttonRead);
+        TextView text = findViewById(R.id.autor); // создаем ссылку на элемент автор
+        EditText editSurname = findViewById(R.id.surname); // создаем ссылку на элемент с фамилией
+        EditText editName = findViewById(R.id.name); // создаем ссылку на элемент с именем
+        EditText editLastname = findViewById(R.id.lastname); // создаем ссылку на элемент с отчеством
+        Button save = findViewById(R.id.buttonSave1); // создаем ссылку на элемент сохранить
+        Button read = findViewById(R.id.buttonRead); // создаем ссылку на элемент считать
 
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String filename = editSurname.getText().toString();
-                String text = editSurname.getText().toString() + " " + editName.getText().toString() + " " + editLastname.getText().toString();;
+
+                                String filename = editSurname.getText().toString(); // создаем переменную для сохранения данных
+                String text = editSurname.getText().toString() + " " + editName.getText().toString() + " " + editLastname.getText().toString();; // создаем переменную для сохранения всех данных
                 Log.d("MyLog", filename);
                 try {
                     outputStream = openFileOutput(filename, Context.MODE_PRIVATE);
@@ -72,10 +73,6 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    //if (volHigSavValue.equals("")) {
-//        Toast.makeText(MainActivity2.this, " Заполните данные - Высокое давление", Toast.LENGTH_LONG).show();
-//        System.out.println(" Заполните данные - Высокое давление");
-//        }
 
     private void volumeButton(){ //     1. Метод действия кнопки
         Button volumeBut = findViewById(R.id.buttonVolume); //     2. Создаем ссылку на созданную кнопку

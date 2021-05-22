@@ -2,6 +2,7 @@ package com.example.myapplication131tanometr;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -11,6 +12,7 @@ import android.widget.Toast;
 
 public class MainActivity2 extends AppCompatActivity {
     final String TAG = "MyLog";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +34,11 @@ public class MainActivity2 extends AppCompatActivity {
                 Log.d(TAG, "НАЖАТА КНОПКА СОХРАНИТЬ");
                 try {                  //     9. Обрабатываем ошибки
                     Volume volume = new Volume(Integer.parseInt(volHigSavValue), Integer.parseInt(volLowSavValue));
+                    SharedPreferences settings = getSharedPreferences("HightVolume", MODE_PRIVATE);
+                    SharedPreferences.Editor editor = settings.edit();
+                    editor.putString( "name", "John" );
 
+                    editor.commit();
                 } catch (Exception ex) {
                     Toast.makeText(MainActivity2.this, "Не верный формат ввода", Toast.LENGTH_LONG).show();  //     Всплывающие ошибки
                 }
